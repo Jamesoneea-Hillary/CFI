@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="contact-hero">
+
+    <div class="contact-overlay">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    CONTACT COMMUNITY FOCUS INTERNATIONAL
+                </span>
+
+                <h1>
+                    Let's Create Impact Together
+                </h1>
+
+                <p>
+                    Reach out to our team for partnerships,
+                    inquiries, donations, volunteering opportunities,
+                    or any information about our programs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT INFO -->
+<!-- CONTACT DETAILS -->
+<section class="contact-info">
+
+    <div class="container">
+
+        <div class="info-grid">
+
+            <div class="info-card">
+
+                <h3>📍 Address</h3>
+
+                <p>{{ info.address }}</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>📞 Phone</h3>
+
+                <p>{{ info.phone }}</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>✉️ Email</h3>
+
+                <p>{{ info.email }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOCIAL SECTION -->
+<section class="social-section">
+
+    <div class="container">
+
+        <h2>Connect With Us</h2>
+
+        <div class="social-links">
+
+            <a href="{{ info.facebook }}">
+                Facebook
+            </a>
+
+            <a href="{{ info.twitter }}">
+                Twitter
+            </a>
+
+            <a href="{{ info.linkedin }}">
+                LinkedIn
+            </a>
+
+            <a href="{{ info.youtube }}">
+                YouTube
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="office-hours">
+
+    <div class="container">
+
+        <h2>Office Hours</h2>
+
+        {% for hour in office_hours %}
+
+        <div class="hour-row">
+
+            <span>{{ hour.weekday }}</span>
+
+            <span>
+                {{ hour.opening_time }}
+                -
+                {{ hour.closing_time }}
+            </span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <div class="contact-form">
+
+                <h2>Send Us A Message</h2>
+
+                <form id="contactForm" method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            required>
+
+                        <label for="name">Full Name</label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            required>
+
+                        <label for="email">Email Address</label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            required>
+
+                        <label for="phone">Phone Number</label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            required>
+
+                        <label for="subject">Subject</label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <textarea
+                            name="message"
+                            id="message"
+                            rows="6"
+                            required></textarea>
+
+                        <label for="message">Your Message</label>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="contact-btn">
+
+                        <span class="btn-text">
+                            Send Message
+                        </span>
+
+                        <span class="spinner"></span>
+
+                    </button>
+
+                </form>
+
+                <div id="successAlert" class="success-alert">
+                    Message sent successfully!
+                </div>
+
+                <div id="errorAlert" class="error-alert">
+                    Something went wrong.
+                </div>
+
+            </div>
+
+            <div class="contact-map-card">
+
+                {{ info.google_map_embed|safe }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

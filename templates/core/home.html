@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-text">
+
+            <h1>
+                Empowering Communities Through Inclusion & Opportunity
+            </h1>
+
+            <p>
+                Community Focus International works to improve the lives of persons with disabilities
+                and vulnerable communities through education, assistive technology, health, and economic empowerment.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn primary-btn">Learn More</a>
+
+                <a href="#" class="btn secondary-btn">Donate Now</a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-image">
+
+            <img src="{% static 'images/hero.jpg' %}" alt="Community Impact Image">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <h2>500+</h2>
+            <p>Wheelchairs Distributed</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>2,400+</h2>
+            <p>Eyeglasses Provided</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>1,200+</h2>
+            <p>Families Supported</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>50+</h2>
+            <p>Communities Reached</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="programs">
+
+    <div class="section-title">
+        <h2>Our Programs</h2>
+        <p>We implement inclusive programs that empower communities and improve livelihoods.</p>
+    </div>
+
+    <div class="programs-container">
+
+        <div class="program-card">
+            <h3>Assistive Technology</h3>
+            <p>
+                Providing wheelchairs, eyeglasses, hearing aids and other assistive devices
+                to improve mobility and independence.
+            </p>
+        </div>
+
+        <div class="program-card">
+            <h3>Inclusive Education</h3>
+            <p>
+                Supporting learners with disabilities through access to education,
+                learning materials and school inclusion programs.
+            </p>
+        </div>
+
+        <div class="program-card">
+            <h3>Health & WASH</h3>
+            <p>
+                Improving access to healthcare services, sanitation, and clean water
+                in vulnerable communities.
+            </p>
+        </div>
+
+        <div class="program-card">
+            <h3>Economic Empowerment</h3>
+            <p>
+                Supporting livelihoods through skills training, entrepreneurship
+                and small business support programs.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="stories">
+
+    <div class="section-title">
+        <h2>Success Stories</h2>
+        <p>Real impact from the communities we serve.</p>
+    </div>
+
+    <div class="stories-container">
+
+        <!-- STORY 1 -->
+        <div class="story-card">
+
+            <div class="story-image">
+                <img src="{% static 'images/story1.jpg' %}" alt="Story 1">
+            </div>
+
+            <div class="story-text">
+                <h3>Restoring Mobility for John</h3>
+                <p>
+                    John, a young man from Northern Uganda, received a wheelchair
+                    through our assistive technology program, restoring his independence
+                    and ability to move freely in his community.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- STORY 2 -->
+        <div class="story-card reverse">
+
+            <div class="story-image">
+                <img src="{% static 'images/story2.jpg' %}" alt="Story 2">
+            </div>
+
+            <div class="story-text">
+                <h3>Inclusive Education for Sarah</h3>
+                <p>
+                    Sarah was able to return to school after receiving learning support
+                    materials and assistive tools that helped her participate fully in class.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="impact">
+
+    <div class="section-title">
+        <h2>Our Impact</h2>
+        <p>We are reaching communities across Uganda with inclusive support services.</p>
+    </div>
+
+    <div class="impact-box">
+
+        <div class="impact-text">
+            <h3>Nationwide Reach</h3>
+            <p>
+                Community Focus International works across multiple districts,
+                delivering assistive devices, education support, and health outreach programs.
+            </p>
+        </div>
+
+        <div class="impact-map">
+            <img src="{% static 'images/map.jpg' %}" alt="Uganda Impact Map">
+        </div>
+
+    </div>
+
+</section>
+<section class="cta">
+
+    <div class="cta-box">
+
+        <h2>Make a Difference Today</h2>
+
+        <p>
+            Your support helps us provide assistive devices, education, and health services
+            to vulnerable communities.
+        </p>
+
+        <a href="#" class="cta-btn">Donate Now</a>
+
+    </div>
+
+</section>
+<section class="news">
+
+    <div class="section-title">
+        <h2>Latest News</h2>
+        <p>Updates from our programs and field activities.</p>
+    </div>
+
+    <div class="news-container">
+
+        <div class="news-card">
+            <h3>Wheelchair Distribution Drive</h3>
+            <p>Over 100 wheelchairs distributed in Northern Uganda.</p>
+        </div>
+
+        <div class="news-card">
+            <h3>Inclusive Education Workshop</h3>
+            <p>Teachers trained on disability inclusion strategies.</p>
+        </div>
+
+        <div class="news-card">
+            <h3>Health Outreach Program</h3>
+            <p>Free medical screening for rural communities.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="partners">
+
+    <div class="section-title">
+        <h2>Our Partners</h2>
+    </div>
+
+    <div class="partners-container">
+
+        <div class="partner">Partner 1</div>
+        <div class="partner">Partner 2</div>
+        <div class="partner">Partner 3</div>
+        <div class="partner">Partner 4</div>
+
+    </div>
+
+</section>
+<section class="newsletter">
+
+    <h2>Subscribe to Our Newsletter</h2>
+
+    <p>Get updates on programs, impact stories, and events.</p>
+
+    <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+
+</section>
+
+{% endblock %}
