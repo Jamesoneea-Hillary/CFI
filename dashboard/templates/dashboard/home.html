@@ -1,0 +1,87 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+
+<h2>Welcome to CFI Admin Dashboard 🚀</h2>
+
+<h6 class="sidebar-heading mt-4 px-3 text-uppercase text-secondary">
+    Tools
+</h6>
+
+<a href="/admin/" target="_blank">
+    <i class="bi bi-gear-fill"></i>
+    Django Admin
+</a>
+
+<a href="/" target="_blank">
+    <i class="bi bi-globe"></i>
+    Visit Website
+</a>
+
+<div class="row mt-4">
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h5>News</h5>
+            <p>Manage articles</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h5>Donations</h5>
+            <p>Track contributions</p>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card p-3">
+            <h5>Work</h5>
+            <p>Job postings</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="row g-3">
+
+    <div class="col-md-3">
+        <div class="card bg-primary text-white card-box">
+            <h5>News</h5>
+            <h2>{{ news_count }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-success text-white card-box">
+            <h5>Donations</h5>
+            <h2>{{ donations_count }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-warning text-dark card-box">
+            <h5>Contacts</h5>
+            <h2>{{ contacts_count }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card bg-dark text-white card-box">
+            <h5>Work Projects</h5>
+            <h2>{{ work_count }}</h2>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+<h5>Latest News</h5>
+<ul>
+    {% for item in latest_news %}
+        <li>{{ item.title }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

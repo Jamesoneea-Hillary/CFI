@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="work-hero">
+
+    <div class="work-overlay">
+
+        <div class="container">
+
+            <div class="work-hero-content">
+
+                <h1>
+                    Our Work
+                </h1>
+
+                <p>
+                    Transforming communities through inclusive
+                    development, education, health, advocacy,
+                    empowerment and sustainable livelihoods.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROGRAMS -->
+<section class="program-areas">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Our Program Areas</h2>
+
+            <p>
+                We implement initiatives that create measurable
+                impact across communities.
+            </p>
+
+        </div>
+
+        <div class="program-cards">
+
+            {% for program in programs %}
+
+                {% if program.slug %}
+
+                    <a href="{% url 'program_detail' program.slug %}" class="program-card">
+                        <img
+                            src="{{ program.image.url }}"
+                            alt="{{ program.title }}">
+
+                        <div class="program-content">
+
+                            <h3>
+                                {{ program.title }}
+                            </h3>
+
+                            <p>
+                                {{ program.short_description }}
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- IMPACT -->
+<section class="impact-metrics">
+
+    <div class="container">
+
+        <div class="metrics-grid">
+
+            {% for metric in metrics %}
+
+            <div class="metric-card">
+
+                <h2>{{ metric.value }}</h2>
+
+                <p>{{ metric.title }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="featured-projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Featured Projects</h2>
+
+        </div>
+
+        <div class="project-grid">
+
+            {% for project in projects %}
+
+            <div class="project-card">
+
+                <img
+                    src="{{ project.image.url }}"
+                    alt="{{ project.title }}">
+
+                <div class="project-content">
+
+                    <h3>{{ project.title }}</h3>
+
+                    <p>{{ project.summary }}</p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STORIES -->
+<section class="success-stories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Success Stories</h2>
+
+        </div>
+
+        <div class="stories-grid">
+
+            {% for story in stories %}
+
+            <div class="story-card">
+
+                <img
+                    src="{{ story.image.url }}"
+                    alt="{{ story.title }}">
+
+                <h3>{{ story.title }}</h3>
+
+                <p>{{ story.beneficiary_name }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="work-cta">
+
+    <div class="container">
+
+        <h2>
+            Join Us In Creating Sustainable Change
+        </h2>
+
+        <a href="/contact/" class="primary-btn">
+            Partner With Us
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

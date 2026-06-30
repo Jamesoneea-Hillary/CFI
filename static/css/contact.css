@@ -1,0 +1,245 @@
+   /* CONTACT FORM */
+
+.contact-hero{
+    min-height:60vh;
+    background:
+        linear-gradient( rgba(0,58,112,.85), rgba(0,58,112,.85)),
+        url('../images/contact-banner.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.contact-overlay{
+    width:100%;
+}
+
+.hero-content{
+    max-width:700px;
+    color:white;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    padding:10px 18px;
+    border-radius:50px;
+    margin-bottom:20px;
+}
+
+.contact-hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.contact-hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 15px;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+}
+
+.form-group label {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    background: #fff;
+    padding: 0 6px;
+    color: #777;
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1e73be;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:valid + label,
+.form-group textarea:valid + label {
+    top: -10px;
+    left: 12px;
+    color: #1e73be;
+    font-size: 13px;
+}
+
+.contact-btn {
+    width: 100%;
+    background: #1e73be;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact-btn:hover {
+    background: #145b97;
+}
+
+.spinner {
+    display: none;
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading .spinner {
+    display: inline-block;
+}
+
+.loading .btn-text {
+    display: none;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.success-alert {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 10px;
+}
+
+.success-alert.show {
+    display: block;
+}
+
+.error-alert{
+    display:none;
+    margin-top:20px;
+    padding:15px;
+    background:#f8d7da;
+    color:#842029;
+    border-radius:10px;
+}
+
+.error-alert.show{
+    display:block;
+}
+.social-section {
+
+    padding: 80px 0;
+    text-align: center;
+}
+.contact-info{
+    padding:80px 0;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.info-card{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.info-card h3{
+    color:#1e73be;
+    margin-bottom:15px;
+}
+
+.info-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.office-hours{
+    padding:80px 0;
+    background:#f8fafc;
+}
+
+.office-hours h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hour-row{
+    display:flex;
+    justify-content:space-between;
+    padding:15px 20px;
+    background:white;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.social-links a {
+    background: #1e73be;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+.contact-map-card {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    min-height: 500px;
+}
+
+.contact-map-card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

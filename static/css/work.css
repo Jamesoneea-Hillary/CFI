@@ -1,0 +1,323 @@
+   /* OUR WORK PAGE */
+
+.work-hero {
+    min-height: 70vh;
+    background:
+        linear-gradient(
+            rgba(0, 58, 112, 0.85),
+            rgba(0, 58, 112, 0.85)
+        ),
+        url('../images/work-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.work-hero-content {
+    max-width: 750px;
+    color: #fff;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,.15);
+    padding: 10px 18px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.work-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.work-hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.program-areas,
+.featured-projects,
+.success-stories {
+
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: #003A70;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.program-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .4s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.program-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.program-content {
+    padding: 25px;
+}
+
+.program-content h3 {
+    color: #003A70;
+    margin-bottom: 15px;
+}
+
+.program-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.impact-metrics {
+    background: #003A70;
+    padding: 100px 0;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.metric-card {
+    text-align: center;
+    background: rgba(255,255,255,.08);
+    padding: 40px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+}
+
+.metric-card h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.metric-card p {
+    color: #e5e5e5;
+    font-size: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .4s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #003A70;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.story-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    transition: .4s;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+}
+
+.story-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    color: #003A70;
+    margin: 20px 15px 10px;
+}
+
+.story-card p {
+    padding-bottom: 25px;
+    color: #666;
+}
+
+.work-cta {
+    background: linear-gradient(135deg, #003A70, #0056A3);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.work-cta h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+}
+
+.work-cta .primary-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: white;
+    color: #003A70;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.work-cta .primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+    .work-hero h1 {
+    font-size: 3rem;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-hero {
+        min-height: 60vh;
+        text-align: center;
+    }
+
+    .work-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .work-cta h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .work-hero h1 {
+        font-size: 2rem;
+    }
+    .metric-card h2 {
+        font-size: 2.2rem;
+    }
+}
+
+.program-hero{
+    height:70vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.program-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.program-overlay{
+    position:absolute;
+    inset:0;
+    background: rgba(0,58,112,.75);
+    display:flex;
+    align-items:center;
+}
+
+.program-overlay .container{
+    color:white;
+}
+
+.program-overlay h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.program-overlay p{
+    max-width:700px;
+    font-size:1.2rem;
+}
+
+.program-about,
+.program-objectives,
+.program-beneficiaries,
+.program-projects{
+    padding:100px 0;
+}
+
+.program-about h2,
+.program-objectives h2,
+.program-beneficiaries h2,
+.program-projects h2{
+    color:#003A70;
+    margin-bottom:20px;
+}
+
+.program-about p,
+.program-objectives p,
+.program-beneficiaries p{
+    line-height:1.9;
+    color:#555;
+}

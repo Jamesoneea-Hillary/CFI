@@ -13,7 +13,7 @@
         <div class="hero-text">
 
             <h1>
-                Empowering Communities Through Inclusion & Opportunity
+                Empowering people. Changing lives
             </h1>
 
             <p>
@@ -23,9 +23,9 @@
 
             <div class="hero-buttons">
 
-                <a href="#" class="btn primary-btn">Learn More</a>
+                <a href="{% url 'about' %}" class="btn primary-btn">Learn More</a>
 
-                <a href="#" class="btn secondary-btn">Donate Now</a>
+                <a href="{% url 'donate' %}" class="btn secondary-btn">Donate Now</a>
 
             </div>
 
@@ -34,7 +34,7 @@
         <!-- RIGHT SIDE -->
         <div class="hero-image">
 
-            <img src="{% static 'images/hero.jpg' %}" alt="Community Impact Image">
+            <img src="{% static 'images/community-impact.png' %}" alt="Community Impact Image">
 
         </div>
 
@@ -145,14 +145,13 @@
         <div class="story-card reverse">
 
             <div class="story-image">
-                <img src="{% static 'images/story2.jpg' %}" alt="Story 2">
+                <img src="{% static 'images/inno.jpg' %}" alt="Story 2">
             </div>
 
             <div class="story-text">
-                <h3>Inclusive Education for Sarah</h3>
+                <h3>Inclusive Education for Nengo Innocent</h3>
                 <p>
-                    Sarah was able to return to school after receiving learning support
-                    materials and assistive tools that helped her participate fully in class.
+                    I was the best in my class at the end of Second term exams. I am very happy because I now understand better whatever my teachers teach.
                 </p>
             </div>
 
@@ -196,7 +195,7 @@
             to vulnerable communities.
         </p>
 
-        <a href="#" class="cta-btn">Donate Now</a>
+        <a href="{% url 'donate' %}" class="cta-btn">Donate Now</a>
 
     </div>
 

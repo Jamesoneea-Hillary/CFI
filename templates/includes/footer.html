@@ -1,0 +1,221 @@
+<section class="impact-strip">
+
+    <div class="container">
+
+        <div class="impact-items">
+
+            <div class="impact-item">
+
+                <h2>20+</h2>
+
+                <p>Years of Service</p>
+
+            </div>
+
+            <div class="impact-item">
+
+                <h2>50+</h2>
+
+                <p>Projects Implemented</p>
+
+            </div>
+
+            <div class="impact-item">
+
+                <h2>100,000+</h2>
+
+                <p>Lives Impacted</p>
+
+            </div>
+
+            <div class="impact-item">
+
+                <h2>30+</h2>
+
+                <p>Partner Organizations</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <img src="/static/images/logo.png"
+                    alt="CFI Logo"
+                    class="footer-logo">
+
+                <p>
+
+                    Community Focus International is committed to empowering
+                    vulnerable communities through inclusive education,
+                    health, livelihoods, advocacy and sustainable development.
+
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="/"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+
+                    <li><a href="{% url 'about' %}"><i class="fa-solid fa-people-group" aria-hidden="true"></i> About</a></li>
+
+                    <li><a href="{% url 'work' %}"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Our Work</a></li>
+
+                    <li><a href="{% url 'news' %}"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> News & Blogs</a></li>
+
+                    <li><a href="{% url 'contact' %}"><i class="fa-solid fa-phone" aria-hidden="true"></i> Contact</a></li>
+
+                    <li><a href="{% url 'donate' %}"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- PROGRAMS -->
+
+            <div class="footer-column">
+
+                <h3>Programs</h3>
+
+                <ul>
+
+                    {% for program in footer_programs %}
+
+                    <li>
+
+                        <a href="{% url 'program_detail' program.slug %}">
+
+                            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                            {{ program.title }}
+
+                        </a>
+
+                    </li>
+
+                    {% empty %}
+
+                    <li><i class="fa-solid fa-circle-info" aria-hidden="true"></i> No programs added.</li>
+
+                    {% endfor %}
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>Contact Us</h3>
+
+                {% if contact_info %}
+
+                <p>
+
+                    <strong><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Address</strong><br>
+
+                    {{ contact_info.address }}
+
+                </p>
+
+                <p>
+
+                    <strong><i class="fa-solid fa-phone" aria-hidden="true"></i> Phone</strong><br>
+
+                    {{ contact_info.phone }}
+
+                </p>
+
+                <p>
+
+                    <strong><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</strong><br>
+
+                    {{ contact_info.email }}
+
+                </p>
+
+                <div class="footer-social">
+
+                    {% if contact_info.facebook %}
+                    <a href="{{ contact_info.facebook }}" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    {% endif %}
+
+                    {% if contact_info.twitter %}
+                    <a href="{{ contact_info.twitter }}" target="_blank">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    {% endif %}
+
+                    {% if contact_info.linkedin %}
+                    <a href="{{ contact_info.linkedin }}" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    {% endif %}
+
+                    {% if contact_info.youtube %}
+                    <a href="{{ contact_info.youtube }}" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    {% endif %}
+
+                </div>
+
+                {% if contact_info.google_map_embed %}
+
+                <div class="footer-map">
+
+                    {{ contact_info.google_map_embed|safe }}
+
+                </div>
+
+                {% endif %}
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © {% now "Y" %} Community Focus International.
+                All Rights Reserved.
+
+            </p>
+
+            <div class="footer-bottom-links">
+
+                <a href="#"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Privacy Policy</a>
+
+                <a href="#"><i class="fa-solid fa-file-contract" aria-hidden="true"></i> Terms of Use</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>

@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="program-hero">
+
+    <img
+        src="{{ program.image.url }}"
+        alt="{{ program.title }}">
+
+    <div class="program-overlay">
+
+        <div class="container">
+
+            <h1>
+                {{ program.title }}
+            </h1>
+
+            <p>
+                {{ program.short_description }}
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="program-about">
+
+    <div class="container">
+
+        <h2>About This Program</h2>
+
+        <p>
+            {{ program.description }}
+        </p>
+
+    </div>
+
+</section>
+
+<section class="program-objectives">
+
+    <div class="container">
+
+        <h2>Objectives</h2>
+
+        <p>
+            {{ program.objectives }}
+        </p>
+
+    </div>
+
+</section>
+
+<section class="program-beneficiaries">
+
+    <div class="container">
+
+        <h2>Target Beneficiaries</h2>
+
+        <p>
+            {{ program.beneficiaries }}
+        </p>
+
+    </div>
+
+</section>
+
+<section class="program-projects">
+
+    <div class="container">
+
+        <h2>Projects Under This Program</h2>
+
+        <div class="project-grid">
+
+            {% for project in projects %}
+
+            <div class="project-card">
+
+                <img
+                    src="{{ project.image.url }}"
+                    alt="{{ project.title }}">
+
+                <div class="project-content">
+
+                    <h3>
+                        {{ project.title }}
+                    </h3>
+
+                    <p>
+                        {{ project.summary }}
+                    </p>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <p>
+                No projects added yet.
+            </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

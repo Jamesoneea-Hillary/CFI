@@ -1,0 +1,13 @@
+:root{--container-max:1200px}
+.container{width:100%;max-width:var(--container-max);margin:0 auto;padding:0 6%}
+@media (max-width:768px){.container{padding:0 4%}}
+
+/* Newsletter form on homepage */
+.newsletter form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.newsletter input[type="email"]{min-width:260px;flex:1 1 260px;border:0;border-radius:10px;padding:12px 14px;font-size:15px;outline:none}
+.newsletter input[type="email"]::placeholder{color:rgba(255,255,255,.75)}
+.newsletter button[type="submit"]{border:0;background:#fff;color:var(--primary);padding:12px 18px;border-radius:10px;font-weight:800;cursor:pointer;transition:.22s ease}
+.newsletter button[type="submit"]:hover{background:rgba(255,255,255,.92);transform:translateY(-1px)}
+
+@media (max-width:600px){.newsletter form{flex-direction:column}.newsletter button[type="submit"]{width:100%}}
+

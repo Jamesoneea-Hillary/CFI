@@ -1,10 +1,23 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CFI</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'css/work.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/_home_helpers.css' %}">
+
+    <!-- Browser tab icon (favicon) -->
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'images/logo.png' %}">
 </head>
 
 <body>
@@ -16,8 +29,14 @@
         {% endblock %}
     </main>
 
+    <button id="topBtn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/contact.js' %}"></script>
+
+    {% include 'includes/footer.html' %}
 
 </body>
 </html>

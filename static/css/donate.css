@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+
+    /* Limit styling scope to the donate page to avoid conflicts */
+    .donate-page * {
+        box-sizing: border-box;
+    }
+
+    /* IMPORTANT: avoid global selectors like body/main/.container */
+    .donate-page {
+        min-height: 100vh;
+        padding: 20px;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: #fff;
+    }
+
+    .donate-page main {
+        display: block;
+        width: 100%;
+    }
+
+    .donate-page .container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #111827;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .left {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .left p {
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+    .right {
+        padding: 40px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .amounts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .amount {
+        background: #1f2937;
+        padding: 12px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .amount:hover {
+        background: #2563eb;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background: #1f2937;
+        color: white;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        background: #2563eb;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #1d4ed8;
+    }
+
+    .note {
+        font-size: 12px;
+        opacity: 0.7;
+        margin-top: 10px;
+    }
+
+    .success {
+        display: none;
+        margin-top: 15px;
+        padding: 10px;
+        background: #16a34a;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    @media(max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+
+        .amounts {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }

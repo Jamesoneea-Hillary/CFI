@@ -1,0 +1,32 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+
+<h2>📊 Donation Analytics</h2>
+
+<canvas id="donationChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{{ labels|json_script:"donationLabels" }}
+{{ values|json_script:"donationValues" }}
+
+<script>
+const ctx = document.getElementById('donationChart');
+const labels = JSON.parse(document.getElementById('donationLabels').textContent);
+const values = JSON.parse(document.getElementById('donationValues').textContent);
+
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Donations',
+            data: values,
+            borderWidth: 2
+        }]
+    }
+});
+</script>
+
+{% endblock %}

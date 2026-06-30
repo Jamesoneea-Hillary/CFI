@@ -1,0 +1,32 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+
+<h2>📰 Manage News</h2>
+
+<a href="/news/create/" class="btn btn-primary mb-3">+ Add News</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for item in news %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.created_at }}</td>
+            <td>
+                <a href="/news/edit/{{ item.id }}/" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/news/delete/{{ item.id }}/" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

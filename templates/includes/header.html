@@ -1,26 +1,38 @@
+{% load static %}
+
 <header class="header">
     <nav class="navbar">
 
         <!-- Logo -->
         <div class="logo">
-            <a href="/">CFI</a>
+            <a href="/" aria-label="Community Focus International">
+                <img src="{% static 'images/logo.png' %}" alt="CFI Logo" class="nav-logo" />
+                <span>COMMUNITY FOCUS INTERNATIONAL</span>
+            </a>
         </div>
+
 
         <!-- Nav Links -->
         <ul class="nav-menu">
 
-            <li><a href="/" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">About Us</a></li>
-            <li><a href="#" class="nav-link">Programs</a></li>
-            <li><a href="#" class="nav-link">Impact</a></li>
-            <li><a href="#" class="nav-link">News</a></li>
-            <li><a href="#" class="nav-link">Publications</a></li>
-            <li><a href=" {% url 'contact' %} " class="nav-link">Contact</a></li>
-
             <li>
-                <a href="#" class="donate-btn">Donate</a>
+                <a href="/" class="nav-link"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
             </li>
-
+            <li>
+                <a href="{% url 'about' %}" class="nav-link"><i class="fa-solid fa-people-group" aria-hidden="true"></i> About Us</a>
+            </li>
+            <li>
+                <a href="{% url 'work' %}" class="nav-link"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Our Work</a>
+            </li>
+            <li>
+                <a href="{% url 'news' %}" class="nav-link"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> News & Blogs</a>
+            </li>
+            <li>
+                <a href=" {% url 'contact' %} " class="nav-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> Contact</a>
+            </li>
+            <li>
+                <a href=" {% url 'donate' %}" class="donate-btn"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a>
+            </li>
         </ul>
 
         <!-- Mobile Menu Icon -->

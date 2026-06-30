@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="article-header">
+
+    <div class="container">
+
+        <div class="article-meta">
+
+            <span>
+                {{ post.category }}
+            </span>
+
+            <span>
+                {{ post.created_at|date:"F d, Y" }}
+            </span>
+
+        </div>
+
+        <h1>
+            {{ post.title }}
+        </h1>
+
+    </div>
+
+</section>
+
+<section class="article-image">
+
+    <img
+        src="{{ post.featured_image.url }}"
+        alt="{{ post.title }}">
+</section>
+
+<section class="article-content">
+
+    <div class="container">
+
+        <div class="article-body">
+
+            {{ post.content|safe }}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="related-news">
+
+    <div class="container">
+
+        <h2>Related Articles</h2>
+
+        <div class="news-grid">
+
+            {% for item in related %}
+
+            <div class="news-card">
+
+                <img src="{{ item.featured_image.url }}">
+
+                <div class="news-content">
+
+                    <h3>{{ item.title }}</h3>
+
+                    <a href="{% url 'news_detail' item.slug %}">Read More</a>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+            <div class="share-buttons">
+
+                <h4>Share this article</h4>
+
+                <a href="#">Facebook</a>
+
+                <a href="#">LinkedIn</a>
+
+                <a href="#">WhatsApp</a>
+
+                <a href="#">X</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
